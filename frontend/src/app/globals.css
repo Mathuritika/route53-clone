@@ -1,0 +1,18 @@
+body { margin: 0; }
+.r53-topnav { position: sticky; top: 0; z-index: 1002; }
+.r53-center { display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+.r53-search {
+  width: 100%; max-width: 480px; height: 30px; border-radius: 8px; border: 1px solid #7d8998;
+  background: #0f1b2a; color: #fff; padding: 0 12px; font-size: 14px; box-sizing: border-box;
+}
+.r53-filters { display: flex; gap: 12px; flex-wrap: wrap; }
+.r53-filters > :first-child { flex: 1 1 320px; max-width: 560px; }
+.r53-filters > :last-child { min-width: 200px; }
+.r53-values { font-family: inherit; white-space: pre-wrap; overflow-wrap: anywhere; }
+.r53-name-field { display: flex; align-items: center; gap: 8px; }
+.r53-name-field > :first-child { flex: 1; }
+
+/* AWS sign-in page */
+.r53-login { min-height: 100vh; background: #f2f3f3; display: flex; flex-direction: column; align-items: center; padding-top: 48px; }
+.r53-login-logo { font: 700 32px Arial, sans-serif; color: #232f3e; margin-bottom: 24px; }
+.r53-login-card { width: 100%; max-width: 400px; }

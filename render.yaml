@@ -1,0 +1,14 @@
+# Render blueprint for the backend (Render dashboard -> New -> Blueprint -> pick this repo)
+services:
+  - type: web
+    name: route53-clone-api
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: CORS_ORIGINS
+        value: https://YOUR-FRONTEND.vercel.app,http://localhost:3000
