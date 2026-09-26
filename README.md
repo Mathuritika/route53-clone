@@ -2,7 +2,8 @@
 
 A functional clone of the AWS Route 53 console: mocked sign-in, full CRUD for **hosted zones** and **DNS records**, all persisted in SQLite behind a FastAPI backend. It recreates the Route 53 look and workflows; it does not serve real DNS.
 
-
+**Live demo:** https://route53-clone-alpha.vercel.app · **API docs:** https://route53-clone-api-hny5.onrender.com/docs
+> The backend runs on Render's free tier and sleeps when idle, so the first request can take ~50 seconds.
 **Demo login:** `demo` / `demo1234` (a second user `admin` / `admin1234` shows that data is per-user)
 
 ## Tech stack
