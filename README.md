@@ -65,6 +65,11 @@ On first start the backend creates `route53.db` and seeds demo data automaticall
 |backend|`SESSION\_HOURS`|`24`|
 |frontend|`NEXT\_PUBLIC\_API\_URL`|`http://localhost:8000`|
 
+## Deployment
+- **Backend → Render (Web Service):** root directory `backend`, build `pip install -r requirements.txt`, start `uvicorn app.main:app --host 0.0.0.0 --port $PORT`. Env vars: `PYTHON_VERSION=3.11.9`, `CORS_ORIGINS=https://route53-clone-alpha.vercel.app,http://localhost:3000`.
+- **Frontend → Vercel:** root directory `frontend`, env var `NEXT_PUBLIC_API_URL=https://route53-clone-api-hny5.onrender.com`. `frontend/vercel.json` pins the framework to Next.js.
+- SQLite on a free host can reset on restart; the app re-seeds demo data automatically when the database is empty.
+
 ## Architecture
 
 ```
